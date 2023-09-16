@@ -177,3 +177,40 @@ body {
     max-width: 100%;
     max-height: 300px; /* Set a maximum height to limit the image size */
 }
+/* Apply styles to both groups of radio buttons */
+.show-decased, .show-living {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    gap: 10px; /* Adjust the gap between items as needed */
+    align-items: center; /* Vertically center items */
+    flex-direction: row;
+  }
+  
+  /* Style the labels */
+  label {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; /* Adjust the margin between the label and radio button */
+  }
+  
+  /* Style the radio buttons */
+  input[type="radio"] {
+    margin-right: 5px; /* Adjust the margin between radio buttons and labels */
+  }
+
+  .show-decased input[type="radio"], .show-living  input[type="radio"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid rgb(244, 102, 102);
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    margin-right: 8px;
+}
+
+.show-decased input[type="radio"]:checked , .show-living  input[type="radio"]:checked {
+    background-color: rgb(244, 102, 102)
+}
+  
+  

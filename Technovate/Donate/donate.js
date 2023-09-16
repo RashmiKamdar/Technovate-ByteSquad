@@ -84,7 +84,25 @@ function removeImage() {
     removeButton.style.display = 'none'; // Hide the "Remove" button
 }
 
+const passwordField = document.getElementById('password');
+const confirmPasswordField = document.getElementById('confirm-password');
+const validationMessage = document.getElementById('password-validation-message');
 
+passwordField.addEventListener('input', validatePassword);
+confirmPasswordField.addEventListener('input', validatePassword);
+
+function validatePassword() {
+    const password = passwordField.value;
+    const confirmPassword = confirmPasswordField.value;
+
+    if (password !== confirmPassword) {
+        validationMessage.textContent = "Passwords do not match";
+        confirmPasswordField.setCustomValidity("Passwords do not match");
+    } else {
+        validationMessage.textContent = "";
+        confirmPasswordField.setCustomValidity("");
+    }
+}
 
 
     

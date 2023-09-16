@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <script>
+        function notify() {
+            let notification = document.getElementById("ping");
+            
+            // Add a Tailwind CSS animation class
+            notification.classList.add('animate-ping');
+            
+            // Delay the removal of the animation class
+            setTimeout(() => {
+                notification.classList.remove('animate-ping');
+            }, 1000); // Adjust the delay as needed
+        }
+
+        // Call the notify function when the page loads (for demonstration purposes)
+        window.onload = notify;
+        function generateNotification() {
+
+            // Check notification is supported
+            if (!("Notification" in window)) {
+                alert("This browser does not support desktop notification");
+            }
+
+            // Is notifiction granted
+            else if (Notification.permission === "granted") {
+                // Create notification
+                var notification = new Notification(`Hi ${name}!`);
+            }
+
+           // check if permission is not denied
+            else if (Notification.permission !== 'denied') {
+                Notification.requestPermission(function (permission) {
+
+                    // If the user accepts create a notification
+                    if (!('permission' in Notification)) {
+                        Notification.permission = permission;
+                    }
+
+                    // If granted generate notification
+                    if (permission === "granted") {
+                        var notification = new Notification(`Hi ${name}!`);
+                    }
+                });
+            } else {
+                alert(`Permission is ${Notification.permission}`);
+            }
+        }
+    </script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .parent {
+            height: 500px;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+        }
+
+        .child {
+            width: fit-content;
+            background-color: blue;
+
+        }
+    </style>
+    <div>
+
+    
+    <div id="notify h-[100px] w-[100px] ">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+          </svg>
+    </div>
+    <div class="h-[100px] w-[100px] bg-yellow-500 rounded-2xl" id="ping"></div>
+</div>
+</body>
+
+</html>

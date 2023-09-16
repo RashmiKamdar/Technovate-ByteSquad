@@ -178,3 +178,17 @@ body {
     max-width: 100%;
     max-height: 300px; /* Set a maximum height to limit the image size */
 }
+.show-decased input[type="radio"], .show-living  input[type="radio"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid rgb(244, 102, 102);
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    margin-right: 8px;
+}
+
+.show-decased input[type="radio"]:checked , .show-living  input[type="radio"]:checked {
+    background-color: rgb(244, 102, 102)
+}
