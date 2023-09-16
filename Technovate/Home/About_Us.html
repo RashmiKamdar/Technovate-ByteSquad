@@ -130,10 +130,13 @@
 
   <!-- Donar sign in-sign up -->
   <div class="donar-container">
+
+    <!-- Donar Section -->
     <div class="donar-img">
       <h2 class="absolute text-rose-800 text-3xl subpixel-antialiased mx-[300px] my-[100px]">Hi, I'm a Donor....</h2>
       <img src="./donar.avif" alt="" srcset="" class="h-[500px] w-[500px]">
     </div>
+
     <div
       class="my-[-250px] mx-[450px] absolute max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
@@ -169,7 +172,7 @@
           </button>
           <div class="px-6 py-6 lg:px-8">
             <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Sign In to Donate</h3>
-            <form class="space-y-6" action="#">
+            <form class="space-y-6" action="#"> <!--  -->
               <div>
                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
                   email</label>
@@ -201,10 +204,6 @@
                 class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Sign
                 In
                 to your account</button>
-              <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                Already have an account <a
-                  class="cursor-pointer text-blue-700 hover:underline dark:text-blue-500">Sign Up</a>
-              </div>
             </form>
           </div>
         </div>
@@ -212,15 +211,13 @@
     </div>
 
 
-<!-- SIGN IN -->
-
     <div
       class="w-max my-[-250px] mx-[900px] absolute max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
       <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Sign In to Donate</h5>
       <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
         acquisitions of 2021 so far, in reverse chronological order.</p>
-        
+
       <a data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"
         class="cursor-pointer inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
         Sign In
@@ -233,13 +230,13 @@
     </div>
 
 
-
     <!-- Recepient Section -->
     <div class="recepient-container">
       <div class="recepient-img">
         <h2 class="absolute text-rose-800 text-3xl subpixel-antialiased mx-[300px] my-[100px]">Looking for a Donor?</h2>
         <img src="./recepient.jpeg" alt="" srcset="" class="h-[400px] w-[350px] flex flex-row">
       </div>
+
       <div
         class="my-[-200px] mx-[450px] absolute max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
@@ -257,12 +254,66 @@
         </a>
       </div>
 
+      <div id="authentication-modal1" tabindex="-1" aria-hidden="true"
+        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative w-full max-w-md max-h-full">
+          <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <button type="button"
+              class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+              data-modal-hide="authentication-modal">
+              <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+            <div class="px-6 py-6 lg:px-8">
+              <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Sign Up for Transplant</h3>
+              <form class="space-y-6" action="#"> <!--  -->
+                <div>
+                  <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+                    email</label>
+                  <input type="email" name="email" id="email"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                    placeholder="name@company.com" required>
+                </div>
+                <div>
+                  <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+                    password</label>
+                  <input type="password" name="password" id="password" placeholder="••••••••"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                    required>
+                </div>
+                <div id="password-error" class="text-red-500 text-sm mt-1"></div>
+
+                <div class="flex justify-between">
+                  <div class="flex items-start">
+                    <div class="flex items-center h-5">
+                      <input id="remember" type="checkbox" value=""
+                        class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+                        required>
+                    </div>
+                    <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember
+                      me</label>
+                  </div>
+                </div>
+                <button type="submit"
+                  class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Sign
+                  In
+                  to your account</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div
         class="w-max my-[-200px] mx-[900px] absolute max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Sign In to your Account</h5>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
           acquisitions of 2021 so far, in reverse chronological order.</p>
-        <a data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"
+        <a data-modal-target="authentication-modal1" data-modal-toggle="authentication-modal1"
           class="cursor-pointer inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
           Sign In
           <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -272,46 +323,90 @@
           </svg>
         </a>
       </div>
+
     </div>
 
+
     <script>
-      // Get references to the modal and open/close buttons
+      // Get references to the modal and open/close buttons for the first modal
       const modal = document.getElementById('authentication-modal');
       const openModalButtons = document.querySelectorAll('[data-modal-toggle="authentication-modal"]');
       const closeModalButtons = document.querySelectorAll('[data-modal-hide="authentication-modal"]');
-
-      // Function to open the modal
-      function openModal() {
+    
+      // Function to open the first modal
+      function openModal1() {
         modal.classList.remove('hidden');
         modal.classList.add('block');
         document.body.classList.add('modal-open');
       }
-
-      // Function to close the modal
-      function closeModal() {
+    
+      // Function to close the first modal
+      function closeModal1() {
         modal.classList.remove('block');
         modal.classList.add('hidden');
         document.body.classList.remove('modal-open');
       }
-
-      // Event listeners to open and close the modal
+    
+      // Event listeners to open and close the first modal
       openModalButtons.forEach(button => {
-        button.addEventListener('click', openModal);
+        button.addEventListener('click', openModal1);
       });
-
+    
       closeModalButtons.forEach(button => {
-        button.addEventListener('click', closeModal);
+        button.addEventListener('click', closeModal1);
       });
-
-      // Close the modal when clicking outside of it
+    
+      // Close the first modal when clicking outside of it
       modal.addEventListener('click', (e) => {
         if (e.target === modal) {
-          closeModal();
+          closeModal1();
         }
       });
-
-      // Prevent the modal from closing when clicking inside it
+    
+      // Prevent the first modal from closing when clicking inside it
       modal.querySelector('.modal-content').addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+    </script>
+    
+    <script>
+      // Get references to the modal and open/close buttons for the second modal
+      const modal1 = document.getElementById('authentication-modal1');
+      const openModalButtons1 = document.querySelectorAll('[data-modal-toggle="authentication-modal1"]');
+      const closeModalButtons1 = document.querySelectorAll('[data-modal-hide="authentication-modal1"]');
+    
+      // Function to open the second modal
+      function openModal2() {
+        modal1.classList.remove('hidden');
+        modal1.classList.add('block');
+        document.body.classList.add('modal-open');
+      }
+    
+      // Function to close the second modal
+      function closeModal2() {
+        modal1.classList.remove('block');
+        modal1.classList.add('hidden');
+        document.body.classList.remove('modal-open');
+      }
+    
+      // Event listeners to open and close the second modal
+      openModalButtons1.forEach(button => {
+        button.addEventListener('click', openModal2);
+      });
+    
+      closeModalButtons1.forEach(button => {
+        button.addEventListener('click', closeModal2);
+      });
+    
+      // Close the second modal when clicking outside of it
+      modal1.addEventListener('click', (e) => {
+        if (e.target === modal1) {
+          closeModal2();
+        }
+      });
+    
+      // Prevent the second modal from closing when clicking inside it
+      modal1.querySelector('.modal-content').addEventListener('click', (e) => {
         e.stopPropagation();
       });
     </script>
@@ -323,27 +418,39 @@
     </style>
 
 
-<section class="bg-white dark:bg-gray-900">
-  <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
-      <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl"> Want to send feedback about a our service? Need details about our Fututre plan? Let us know.</p>
-      <form action="#" class="space-y-8">
+    <section class="bg-white dark:bg-gray-900">
+      <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us
+        </h2>
+        <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl"> Want to send
+          feedback about a our service? Need details about our Fututre plan? Let us know.</p>
+        <form action="#" class="space-y-8">
           <div>
-              <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-              <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required>
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your
+              email</label>
+            <input type="email" id="email"
+              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              placeholder="name@flowbite.com" required>
           </div>
           <div>
-              <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
-              <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Let us know how we can help you" required>
+            <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
+            <input type="text" id="subject"
+              class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              placeholder="Let us know how we can help you" required>
           </div>
           <div class="sm:col-span-2">
-              <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
-              <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your
+              message</label>
+            <textarea id="message" rows="6"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+              placeholder="Leave a comment..."></textarea>
           </div>
-          <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send message</button>
-      </form>
-  </div>
-</section>
+          <button type="submit"
+            class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send
+            message</button>
+        </form>
+      </div>
+    </section>
 
 
 
@@ -351,7 +458,7 @@
     <footer class="w3-container w3-padding-64 w3-center w3-opacity mt-[100px]">
       <div class="w3-xlarge w3-padding-32 flex justify-center gap-[50px]">
         Made With ❤️ By ByteSquad
-       </div>
+      </div>
 
     </footer>
 

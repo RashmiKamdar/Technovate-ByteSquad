@@ -33,7 +33,7 @@
 
             <input type="text" class="form-input" id="fullname" placeholder="Full Name" required>
             <input type="email" class="form-input" id="email" placeholder="Email" required>
-            <input type="tel" id="phone" class="form-input" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+            <input type="tel" id="phone" class="form-input" name="phone" maxlength="10"
                 placeholder="Contact Number" required>
             <input type="date" class="form-input" id="age" placeholder="Date of Birth" required>
 
@@ -170,6 +170,7 @@
             <div class="healthhist-group-container">
                 <select id="healthhist-group" class="form-input">
                     <option value="selected" selected>-- Health History --</option>
+                    <option value="None">None</option>
                     <option value="HIV/AIDS">HIV/AIDS</option>
                     <option value="Hepatitis B and C">Hepatitis B and C</option>
                     <option value="Active Infections">Active Infections</option>

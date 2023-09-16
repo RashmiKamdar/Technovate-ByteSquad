@@ -16,11 +16,12 @@
 
         <div class="form-container">
 
-            <p class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Register for a Transplant</p>
+            <p class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Register for a Transplant
+            </p>
 
             <div class="container">
                 <!-- Circular image preview container -->
-                <form enctype="multipart/form-data">
+                <form enctype="multipart/form-data" action="../TermsAndConditions/TERMS_PAGE.html" target="_self">
                     <!-- Input field for selecting the image file -->
                     <input type="file" id="image" accept="image/*" onchange="previewImage()">
                     <div id="image-preview">
@@ -29,13 +30,12 @@
                     </div>
                     <button type="button" id="remove-button" onclick="removeImage()" style="display: none;">Remove
                         Image</button>
-                </form>
             </div>
 
             <input type="text" class="form-input" id="fullname" placeholder="Full Name" required>
             <input type="email" class="form-input" id="email" placeholder="Email" required>
-            <input type="tel" id="phone" class="form-input" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                placeholder="Contact Number" required>
+            <input type="tel" id="phone" class="form-input" name="phone" maxlength="10" placeholder="Contact Number"
+                required>
             <input type="date" class="form-input" id="age" placeholder="Date of Birth" required>
 
             <fieldset class="gender">
@@ -80,22 +80,67 @@
                     Deceased
                 </label>
             </fieldset>
-                <div class="show-decased">
+            <div class="show-decased">
+                <label>
+                    <input type="radio" name="organ" value="Heart">
+                    Heart
+                </label><br>
+                <label>
+                    <input type="radio" name="organ" value="Lungs">
+                    Lungs
+                </label><br>
+                <label>
+                    <input type="radio" name="organ" value="Liver">
+                    Liver
+                </label><br>
+                <label>
+                    <input type="radio" name="organ" value="Kidneys">
+                    Kidneys
+                </label><br>
+                <label>
+                    <input type="radio" name="organ" value="Pancreas">
+                    Pancreas
+                </label><br>
+                <label>
+                    <input type="radio" name="organ" value="Intestines">
+                    Intestines
+                </label><br>
+                <label>
+                    <input type="radio" name="organ" value="Corneas">
+                    Corneas
+                </label><br>
+                <label>
+                    <input type="radio" name="organ" value="Skin">
+                    Skin
+                </label><br>
+                <label>
+                    <input type="radio" name="organ" value="Bones">
+                    Bones
+                </label><br>
+                <label>
+                    <input type="radio" name="organ" value="Heart Valves">
+                    Heart Valves
+                </label><br>
+                <label>
+                    <input type="radio" name="organ" value="Veins and Arteries">
+                    Veins and Arteries
+                </label><br>
+            </div>
+            <div class="show-living">
+                <label>
+                    <input type="radio" name="organ" value="Kidney">
+                    Kidney
+                </label><br>
+                <label>
+                    <input type="radio" name="organ" value="Liver">
+                    Liver
+                </label><br>
+                <label>
+                    <input type="radio" name="organ" value="Lung">
+                    Lung
                     <label>
-                        <input type="radio" name="organ" value="Heart">
-                        Heart
-                    </label><br>
-                    <label>
-                        <input type="radio" name="organ" value="Lungs">
-                        Lungs
-                    </label><br>
-                    <label>
-                        <input type="radio" name="organ" value="Liver">
-                        Liver
-                    </label><br>
-                    <label>
-                        <input type="radio" name="organ" value="Kidneys">
-                        Kidneys
+                        <input type="radio" name="organ" value="Bone Marrow">
+                        Bone Marrow
                     </label><br>
                     <label>
                         <input type="radio" name="organ" value="Pancreas">
@@ -106,71 +151,27 @@
                         Intestines
                     </label><br>
                     <label>
-                        <input type="radio" name="organ" value="Corneas">
-                        Corneas
-                    </label><br>
-                    <label>
                         <input type="radio" name="organ" value="Skin">
                         Skin
                     </label><br>
                     <label>
-                        <input type="radio" name="organ" value="Bones">
-                        Bones
+                        <input type="radio" name="organ" value="Blood and Platelets">
+                        Blood and Platelets
                     </label><br>
                     <label>
-                        <input type="radio" name="organ" value="Heart Valves">
-                        Heart Valves
+                        <input type="radio" name="organ" value="Stem Cells">
+                        Stem Cells
                     </label><br>
                     <label>
-                        <input type="radio" name="organ" value="Veins and Arteries">
-                        Veins and Arteries
+                        <input type="radio" name="organ" value="Cornea">
+                        Cornea
                     </label><br>
-                </div>
-                <div class="show-living">
-                    <label>
-                        <input type="radio" name="organ" value="Kidney">
-                        Kidney
-                    </label><br>
-                    <label>
-                        <input type="radio" name="organ" value="Liver">
-                        Liver
-                    </label><br>
-                    <label>
-                        <input type="radio" name="organ" value="Lung">
-                        Lung
-                        <label>
-                            <input type="radio" name="organ" value="Bone Marrow">
-                            Bone Marrow
-                        </label><br>
-                        <label>
-                            <input type="radio" name="organ" value="Pancreas">
-                            Pancreas
-                        </label><br>
-                        <label>
-                            <input type="radio" name="organ" value="Intestines">
-                            Intestines
-                        </label><br>
-                        <label>
-                            <input type="radio" name="organ" value="Skin">
-                            Skin
-                        </label><br>
-                        <label>
-                            <input type="radio" name="organ" value="Blood and Platelets">
-                            Blood and Platelets
-                        </label><br>
-                        <label>
-                            <input type="radio" name="organ" value="Stem Cells">
-                            Stem Cells
-                        </label><br>
-                        <label>
-                            <input type="radio" name="organ" value="Cornea">
-                            Cornea
-                        </label><br>
-                </div>
+            </div>
 
             <div class="healthhist-group-container">
                 <select id="healthhist-group" class="form-input">
                     <option value="selected" selected>-- Health History --</option>
+                    <option value="None">None</option>
                     <option value="HIV/AIDS">HIV/AIDS</option>
                     <option value="Hepatitis B and C">Hepatitis B and C</option>
                     <option value="Active Infections">Active Infections</option>
@@ -180,10 +181,11 @@
                     <option value="Diabetes">Diabetes</option>
                     <option value="Neurological Disorders">Neurological Disorders</option>
                 </select>
+                <input type="submit" class="text-white bg-sky-600 h-[40px] rounded-lg w-[200px]" value="Submit">
             </div>
-            <input type="button" class="text-white bg-sky-600 h-[40px] rounded-lg w-[200px]" value="Submit">
         </div>
     </div>
+    </form>
     <script src="recepient.js"></script>
 </body>
 

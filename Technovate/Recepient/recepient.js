@@ -14,9 +14,9 @@ ageInput.addEventListener('change', () => {
         alert('You must be at least 18 years old to donate.');
         ageInput.value = ''; // Clear the age input
     }
-    else if(age >= 60){
-        alert("You must be below 60 years to donate")
-    }
+    // else if(age >= 60){
+    //     alert("You must be below 60 years to donate")
+    // }
 });
 
  // Function to update the output based on the selected options
