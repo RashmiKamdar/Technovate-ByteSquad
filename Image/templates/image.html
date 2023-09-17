@@ -1,0 +1,16 @@
+<!-- image.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Image</title>
+</head>
+<body>
+    <h1>Image</h1>
+    {% if image_model %}
+        <img src="{% url 'display_image' image_id=image_model.pk %}" alt="Image">
+    {% else %}
+        <p>No image found</p>
+    {% endif %}
+</body>
+</html>
+

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<head>
+    <title>New Record</title>
+</head>
+<body>
+    <h1>Connect MySQL</h1>
+    <hr>
+    <form method="POST" action="{% url 'login_view' %}">
+        {% csrf_token %}
+        Name : <input type="text" placeholder="Enter Name" name="uname" required/><br>
+        Password : <input type="text" placeholder="Enter Email" name="pwd" required/><br>
+        <input type="submit" value="Insert Record">
+    </form>
+</body>
+</html>
