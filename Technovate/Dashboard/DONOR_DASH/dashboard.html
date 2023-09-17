@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>W3.CSS Template</title>
+    <title>Donor Profile</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body, h1, h2, h3, h4, h5, h6 {
@@ -177,31 +176,31 @@
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index: 3; width: 300px;" id="mySidebar">
-    <div class="w3-container">
+    <div class="flex flex-col justify-center items-center text-3xl">
         <span id="closeButton" onclick="closeNav()">&times;</span>
-        <img src="logo.png" style="width: 45%;" class="w3-round"><br><br>
-        <h4><b>HELLO USER:</b></h4>
+        <img src="logo.png" style="width: 45%;" class="mx-[30%] mt-[50px] rounded-xl"><br><br>
+        <h4><b>HELLO</b></h4>
         <p class="w3-text-grey" name="name_tag" id="name">HET SHAH</p>
     </div>
-    <div class="w3-bar-block">
-        <a href="#portfolio" onclick="closeNav()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a>
-        <a href="#contact" onclick="closeNav()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+    <div class="flex flex-col mt-[20px] gap-y-5 justify-center items-center">
+        <a href="#portfolio" onclick="closeNav()" class="text-2xl "><i class="fa fa-th-large fa-fw w3-margin-right"></i>Portfolio</a>
+        <a href="#contact" onclick="closeNav()" class="text-2xl "><i class="fa fa-envelope fa-fw w3-margin-right"></i>Contact Us</a>
     </div>
-    <div class="w3-panel w3-large">
+    <!-- <div class="w3-panel w3-large">
         <i class="fa fa-facebook-official w3-hover-opacity"></i>
         <i class="fa fa-instagram w3-hover-opacity"></i>
         <i class="fa fa-snapchat w3-hover-opacity"></i>
         <i class="fa fa-pinterest-p w3-hover-opacity"></i>
         <i class="fa fa-twitter w3-hover-opacity"></i>
         <i class="fa fa-linkedin w3-hover-opacity"></i>
-    </div>
-    <h2> USER STATUS</h2>
-    <label class="toggle-container">
+    </div> -->
+    <!-- <h2> User Status</h2>
+    <label class="toggle-container justify-center items-center">
         <input type="checkbox" class="toggle-input" id="toggleSwitch">
         <span class="toggle-slider"></span>
     </label>
     
-    <p id="toggleStatus">Dead</p>
+    <p id="toggleStatus">Deceased</p>
     
     <script>
         // Get the toggle switch element
@@ -216,10 +215,10 @@
             if (toggleSwitch.checked) {
                 toggleStatus.innerText = "Alive";
             } else {
-                toggleStatus.innerText = "Dead";
+                toggleStatus.innerText = "Decased";
             }
         });
-    </script>
+    </script> -->
     
 </nav>
 
@@ -235,8 +234,8 @@
     <!-- Add an image in the top right corner -->
     <a href="#"><img id="topRightImage" src="logo.png" alt="Avatar Image"></a>
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-    <div class="w3-container">
-        <h1><b>USER PROFILE (DONOR) </b></h1>
+    <div class="flex justify-center items-center text-4xl">
+        <h1><b>Donor Profile </b></h1>
         <div class="w3-section w3-bottombar w3-padding-16"></div>
     </div>
     <i class="fa fa-bell notification-bell" onclick="showNotificationPopup()"></i>
@@ -270,22 +269,22 @@
 
 
     <!-- First Photo Grid-->
-    <div class="w3-row-padding">
-      <div class="w3-third w3-container w3-margin-bottom" style="float: left; width: 33.33%;">
+    <div class="flex flex-row gap-10 h-max w-fit mt-[40px] ml-[20px] mx-[20px]">
+      <div class="" style=" width: 33.33%;">
           <img src="sr_1.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
               <p><a href="https://www.organindia.org/">ORGAN INDIA</a></p>
               <p>To influence public policy on organ donation through advocacy in India by becoming leaders in public awareness and the collaborative effort of all NGOs in this field.</p>
           </div>
       </div>
-      <div class="w3-third w3-container w3-margin-bottom" style="float: left; width: 33.33%;">
+      <div class="" style="float: left; width: 33.33%;">
           <img src="sr_2.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
               <p><a href="https://www.mohanfoundation.org/">MOHAN FOUNDATION</a></p>
               <p>MOHAN Foundation is a not-for-profit, non-governmental organization started to promote organ donation in 1997 in Chennai by philanthropists and medical professionals led by Dr. Sunil Shroff. The Government of India passed this act in 1994 to broaden the concept of organ donation and stop commercial dealings in organs</p>
           </div>
       </div>
-      <div class="w3-third w3-container" style="float: left; width: 33.33%;">
+      <div class="" style="float: left; width: 33.33%;">
           <img src="src_3.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
               <p><a href="https://orbo.org.in/">ORBO</a></p>
@@ -295,21 +294,22 @@
   </div>
   
   <!-- Image upload input -->
-  <h2>Upload Updated Medical Certificate</h2>
-  <input type="file" id="imageUpload" accept="image/*">
+  <div class="flex flex-col justify-center items-center mt-[40px]">
+      <h2 class="text-3xl">Upload Updated Medical Certificate</h2>
+      <input type="file" id="imageUpload" accept="image/*">
+  </div>
 
 
     <!-- Pagination -->
-    <div class="w3-center w3-padding-32">
+    <!-- <div class="w3-center w3-padding-32">
         <div class="w3-bar"></div>
-    </div>
+    </div> -->
 
     <!-- Contact Section -->
-    <div class="menu-space"></div><!-- Add some space between menu and feedback form -->
-    <div class="w3-container w3-padding-large">
-        <h4 id="contact"><b>FEED-BACK:</b></h4>
-        <div class="w3-row-padding w3-center w3-padding-24">
-            <div class="w3-third w3-dark-grey">
+    <div class="flex flex-col justify-center items-center mt-[40px]">
+        <h4 class="text-3xl"><b>How about a Feedback?</b></h4>
+        <div class="flex flex-row gap-10 w-[50px] h-5">
+            <!-- <div class="mt-10">
                 <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
                 <p>DonateUs12email.com</p>
             </div>
@@ -320,28 +320,25 @@
             <div class="w3-third w3-dark-grey">
                 <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
                 <p>9192929229</p>
-            </div>
+            </div> -->
         </div>
-        <hr class="w3-opacity">
+        <hr class="">
         <form action="/action_page.php" target="_blank">
             <div class="w3-section">
-                <label>DONOR NAME</label>
-                <input class="w3-input w3-border" type="text" name="Name" required>
+                <input class="w-[250px] h-[40px] border-blue-500 rounded" type="text" name="Name" placeholder="Donor Name" required>
             </div>
             <div class="w3-section">
-                <label>ORGAN </label>
-                <input class="w3-input w3-border" type="text" name="Email" required>
+                <input class="w-[250px] h-[40px] border-blue-500 rounded" type="text" name="Email" placeholder="Organ Donated" required>
             </div>
             <div class="w3-section">
-              <label>IS OPERATION SUCESSFULL ? </label><br>
+              <label>Was the operation successful? </label><br>
               <input type="radio" name="Message" value="Yes" required> Yes
               <input type="radio" name="Message" value="No" required> No
           </div>
           <div class="w3-section">
-            <label>RECIPIENT NAME </label>
-            <input class="w3-input w3-border" type="text" name="Email" required>
+            <input class="w-[250px] h-[40px] border-blue-500 rounded" type="text" name="Email" placeholder="Recepient Name" required>
         </div>
-            <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+            <button type="submit" class="h-[50px] w-[250px] bg-blue-500 text-white mb-16 rounded-lg"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
         </form>
     </div>
 </div>
