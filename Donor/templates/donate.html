@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate an Organ</title>
+    <link rel="stylesheet" href="{{css}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="donate-container-img" style="background-image: url('{{ doc }}')">
+
+        <div class="form-container">
+
+            <p class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Register for Organ Donation
+            </p>
+
+            <div class="container">
+                <!-- Circular image preview container -->
+                <form enctype="multipart/form-data" action="{% url 'display_tac' %}" target="_self">
+                    <!-- Input field for selecting the image file -->
+                    <input type="file" id="image" accept="image/*" name='img' onchange="previewImage()">
+                    <div id="image-preview">
+                        <!-- The selected image will be displayed here -->
+                        <img id="preview" src="" alt="Image Preview">
+                    </div>
+                    <button type="button" id="remove-button" onclick="removeImage()" style="display: none;">Remove
+                        Image</button>
+            </div>
+
+            <input type="text" class="form-input" id="fullname" name="name" placeholder="Full Name" required>
+            <input type="password" name="password" class="form-input" id="password" placeholder="Password"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                required>
+            <input type="password" name="confirm-password" class="form-input" id="confirm-password" placeholder="Confirm Password"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                required>
+                <div id="password-validation-message" class="text-red-500 text-sm"></div>
+            <input type="email" class="form-input" id="email" placeholder="Email" name="email" required>
+            <input type="tel" id="phone" class="form-input" name="phone" maxlength="10" placeholder="Contact Number"
+                required>
+            <input type="date" class="form-input" name="dob" id="age" placeholder="Date of Birth" required>
+            <script>function calculateAge(birthdate) {
+                // Parse the birthdate string into a Date object
+                const dob = new Date(birthdate);
+                
+                // Get the current date
+                const currentDate = new Date();
+                
+                // Calculate the difference in milliseconds
+                const timeDifference = currentDate - dob;
+                
+                // Calculate the age by dividing the time difference by milliseconds in a year
+                const age = Math.floor(timeDifference / (365.25 * 24 * 60 * 60 * 1000));
+                
+                return age;
+            }
+            
+            // Example usage:
+            const birthdate = "1990-09-17"; // Replace with the birthdate you want to calculate the age for
+            const age = calculateAge(birthdate);
+            document.getElementById('age').textContent = age;
+            </script>
+            <fieldset class="gender">
+                <label>
+                    <input type="radio" name="gender" value="Male">
+                    Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="Female">
+                    Female
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="Other">
+                    Others
+                </label>
+            </fieldset>
+            <input name="height" type="number" class="form-input" id="height" placeholder="Height (cm)" required>
+            <input name="weight" type="number" class="form-input" id="weight" placeholder="Weight (kg)" required>
+            <input name="state" type="text" class="form-input" id="state" placeholder="State" required>
+            <input name="pincode" type="text" class="form-input" id="pincode" placeholder="Pincode" maxlength="6" required>
+            <div class="blood-group-container">
+                <select id="blood-group" class="form-input">
+                    <option value="selected" selected>-- Blood Group --</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+            </div>
+
+            <fieldset class="living-status">
+                <label>
+                    <input type="radio" name="living-status" value="Living">
+                    Living
+                </label>
+                <label>
+                    <input type="radio" name="living-status" value="Deceased">
+                    Deceased
+                </label>
+
+            </fieldset>
+            <div class="show-decased flex flex-row">
+                <label>
+                    <input type="radio" name="organ" value="Heart">
+                    Heart
+                </label>
+                <label>
+                    <input type="radio" name="organ" value="Lungs">
+                    Lungs
+                </label>
+                <label>
+                    <input type="radio" name="organ" value="Liver">
+                    Liver
+                </label>
+                <label>
+                    <input type="radio" name="organ" value="Kidneys">
+                    Kidneys
+                </label>
+                <label>
+                    <input type="radio" name="organ" value="Pancreas">
+                    Pancreas
+                </label>
+                <label>
+                    <input type="radio" name="organ" value="Intestines">
+                    Intestines
+                </label>
+                <label>
+                    <input type="radio" name="organ" value="Corneas">
+                    Corneas
+                </label>
+                <label>
+                    <input type="radio" name="organ" value="Skin">
+                    Skin
+                </label>
+                <label>
+                    <input type="radio" name="organ" value="Bones">
+                    Bones
+                </label>
+                <label>
+                    <input type="radio" name="organ" value="Heart Valves">
+                    Heart Valves
+                </label>
+                <label>
+                    <input type="radio" name="organ" value="Veins and Arteries">
+                    Veins and Arteries
+                </label>
+            </div>
+            <div class="show-living">
+                <label>
+                    <input type="radio" name="organ" value="Kidney">
+                    Kidney
+                </label>
+                <label>
+                    <input type="radio" name="organ" value="Liver">
+                    Liver
+                </label>
+                <label>
+                    <input type="radio" name="organ" value="Lung">
+                    Lung
+                    <label>
+                        <input type="radio" name="organ" value="Bone Marrow">
+                        Bone Marrow
+                    </label>
+                    <label>
+                        <input type="radio" name="organ" value="Pancreas">
+                        Pancreas
+                    </label>
+                    <label>
+                        <input type="radio" name="organ" value="Intestines">
+                        Intestines
+                    </label>
+                    <label>
+                        <input type="radio" name="organ" value="Skin">
+                        Skin
+                    </label>
+                    <label>
+                        <input type="radio" name="organ" value="Blood and Platelets">
+                        Blood and Platelets
+                    </label>
+                    <label>
+                        <input type="radio" name="organ" value="Stem Cells">
+                        Stem Cells
+                    </label>
+                    <label>
+                        <input type="radio" name="organ" value="Cornea">
+                        Cornea
+                    </label>
+            </div>
+
+            <div class="healthhist-group-container">
+                <select id="healthhist-group" name="healthhistory" class="form-input">
+                    <option value="selected" selected>-- Health History --</option>
+                    <option value="None">None</option>
+                    <option value="HIV/AIDS">HIV/AIDS</option>
+                    <option value="Hepatitis B and C">Hepatitis B and C</option>
+                    <option value="Active Infections">Active Infections</option>
+                    <option value="Cancer">Cancer</option>
+                    <option value="Autoimmune Diseases">Autoimmune Diseases</option>
+                    <option value="Heart Disease">Heart Disease</option>
+                    <option value="Diabetes">Diabetes</option>
+                    <option value="Neurological Disorders">Neurological Disorders</option>
+                </select>
+            </div>
+
+            <input type="submit" class="text-white bg-sky-600 h-[40px] rounded-lg w-[200px]" value="Submit">
+        </div>
+    </div>
+    </form>
+    <script src="{{js}}"></script>
+</body>
+
+</html>
